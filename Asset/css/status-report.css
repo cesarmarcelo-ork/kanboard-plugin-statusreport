@@ -1,0 +1,68 @@
+.status-report-panel {
+    border: 1px solid #dfdfdf;
+    border-left: 4px solid #3c8dbc;
+    background: #fbfbfb;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+}
+
+.status-report-panel-title {
+    margin: 0 0 6px 0;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #555;
+}
+
+.status-report-content {
+    margin-bottom: 6px;
+}
+
+.status-report-empty {
+    color: #777;
+    font-style: italic;
+    margin: 0 0 6px 0;
+}
+
+.status-report-meta,
+.status-report-actions {
+    margin: 0;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.status-report-actions {
+    margin-top: 8px;
+}
+
+.status-report-actions a {
+    margin-right: 12px;
+}
+
+.status-report-flag {
+    margin: 10px 0 -6px 0;
+    font-size: 0.85em;
+}
+
+.status-report-badge {
+    display: inline-block;
+    padding: 1px 6px;
+    border: 1px solid #c5c5c5;
+    border-radius: 3px;
+    background: #f4f4f4;
+    color: #555;
+}
+
+.status-report-badge-current {
+    border-color: #3c8dbc;
+    background: #eaf3f9;
+    color: #2a6f96;
+}
+
+.status-report-flag-action {
+    margin-left: 8px;
+}
+
+.status-report-conflict {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,16 @@
+{
+    "name": "cesarmarcelo-ork/kanboard-plugin-statusreport",
+    "description": "Classify a comment as a status report so it becomes the official current status of the task",
+    "type": "kanboard-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "OrkFlowTech",
+            "homepage": "https://github.com/cesarmarcelo-ork"
+        }
+    ],
+    "require": {
+        "kanboard": ">=1.2.50"
+    }
+}
