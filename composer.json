@@ -1,6 +1,6 @@
 {
     "name": "cesarmarcelo-ork/kanboard-plugin-statusreport",
-    "description": "Classify a comment as a status report so it becomes the official current status of the task",
+    "description": "Classify comments as status reports and expose the current task status in Kanboard",
     "type": "kanboard-plugin",
     "version": "1.0.0",
     "license": "MIT",
@@ -9,8 +9,5 @@
             "name": "OrkFlowTech",
             "homepage": "https://github.com/cesarmarcelo-ork"
         }
-    ],
-    "require": {
-        "kanboard": ">=1.2.50"
-    }
+    ]
 }
