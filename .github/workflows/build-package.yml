@@ -1,0 +1,42 @@
+name: Build plugin package
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate plugin metadata
+        run: |
+          test -f Plugin.php
+          test -f LICENSE
+          test -f README.md
+          grep -q "return 'StatusReport';" Plugin.php
+          grep -q "return '1.0.0';" Plugin.php
+          grep -q "return '>=1.2.50';" Plugin.php
+
+      - name: Build installable ZIP
+        run: |
+          mkdir -p dist/StatusReport
+          rsync -a ./ dist/StatusReport/ \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude 'dist'
+          cd dist
+          zip -r StatusReport-1.0.0.zip StatusReport
+          unzip -l StatusReport-1.0.0.zip | grep 'StatusReport/Plugin.php'
+
+      - name: Upload package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: StatusReport-1.0.0
+          path: dist/StatusReport-1.0.0.zip
