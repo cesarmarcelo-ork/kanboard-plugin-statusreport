@@ -15,6 +15,17 @@ The operational goal is to allow the current status to be perceived directly on 
 
 Plugin version remains **1.0.0**.
 
+### Complementary use with VisibleDescription
+
+StatusReport can be used together with the **VisibleDescription** plugin. The two plugins have different and complementary responsibilities:
+
+- **StatusReport** determines which explicitly classified comment is the task's **Current Status**, preserves the report history in comments, and can mirror the active status into the task description.
+- **VisibleDescription** can display the task description directly on the board card.
+
+When the StatusReport description mirror is enabled, using both plugins allows the latest Current Status to be read directly from the Kanban board without opening the task, while the original Status Reports remain preserved in the comment history.
+
+VisibleDescription is **not required** by StatusReport and remains an optional complementary plugin. StatusReport continues to work independently when VisibleDescription is not installed.
+
 ### Validations performed during development
 
 - Code audit and functional reference validation on **Kanboard 1.2.50 + PHP 8.3 + SQLite**.
